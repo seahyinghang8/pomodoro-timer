@@ -97,7 +97,7 @@ class Timer extends React.Component {
         {/* TODO 6: change time to be the newly formatted time */}
         <div>{time}</div>
         <div>
-          <PausePlayButton isPlaying onClick={this.toggleIsPlaying} />
+          <PausePlayButton isPlaying={isPlaying} onClick={this.toggleIsPlaying} />
         </div>
       </div>
     );
