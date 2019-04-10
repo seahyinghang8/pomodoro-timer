@@ -22,7 +22,7 @@ class App extends React.Component {
       <div className="container">
         <h1 className="header">Today</h1>
         {/* TODO 4. */}
-        <Timer mode="WORK" onSessionComplete={()=>console.log('complete!')} />
+        <Timer mode="WORK" autoplays onSessionComplete={()=>console.log('complete!')} />
         {/*<SessionsCompletedCounter sessionsCompleted={} /> */}
       </div>
     );
