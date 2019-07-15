@@ -5,7 +5,7 @@ import ResetButton from './ResetButton';
 import '../styles/timer.css';
 
 const WORK_TIME = 2;
-const BREAK_TIME = 1;
+const BREAK_TIME = 15;
 
 const MODES_TIMES = {
   WORK: WORK_TIME,
@@ -56,7 +56,7 @@ class Timer extends React.Component {
   }
 
   tick() {
-    const { mode, isPlaying } = this.state;
+    const { mode, isPlaying, time } = this.state;
 
     if (isPlaying) {
       this.setState(prevState => {
@@ -65,7 +65,6 @@ class Timer extends React.Component {
         };
       },
       () => {
-        let time = this.state.time;
         if (time === 0) {
           this.stop();
 
